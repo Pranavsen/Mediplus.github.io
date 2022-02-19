@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MediPlus</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#Doctor">Doctor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#contact">Contact us</a>
+                    </li>
+                </ul>
+                <form class="d-flex ">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light mx-2" type="submit">Search</button>
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-outline-danger  mx-2" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login to MediPlus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- signupModal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Signup to MediPlus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">FullName</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Number" class="form-label">Mobile Number</label>
+                            <input type="email" class="form-control" id="Number" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your Number with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Create an account</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create an account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Home" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                        class="d-block w-100" alt="..." height="740px" width="100%">
+                    <div class="carousel-caption  d-md-block" style="bottom: 2.25rem;">
+                        <h5>Welcome to Mediplus</h5>
+                        <p>“Take care of your health, that it may serve you to serve God.”</p>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="d-block w-100" alt="..." height="740px" width="100%">
+                    <div class="carousel-caption  d-md-block" style="bottom: 2.25rem;">
+                        <h5>Best HealthCare Monitering Website</h5>
+                        <p>“Everyone should have health insurance? I say everyone should have health care. I'm not
+                            selling insurance.”</p>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1106&q=80"
+                        class="d-block w-100" alt="..." height="740px" width="100%">
+                    <div class="carousel-caption  d-md-block" style="bottom: 2.25rem;">
+                        <h5>Award Winning Website</h5>
+                        <p>“Helping one person might not change the world, but it could change the world for one
+                            person.”</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <hr>
+
+    <!-- This is about us -->
+    <section class="main_heading pt-5" id="about">
+        <div class="text-center">
+            <h1 class="display-4 ">About Us</h1>
+            <hr class="w-25 mx-auto">
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="container my-4">
+            <div class="row featurette d-flex justify-content-center align-items-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Emergency Services_ </h2>
+                    <p class="lead">We provided service to evaluate and/or treat any medical condition such that a
+                        prudent layperson possessing an average knowledge of medicine and health, believes that
+                        immediate unscheduled medical care is required...</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1604573798699-b16359862773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                        width="300px" height="300px">
+
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="row featurette d-flex justify-content-center align-items-center">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Qualified Doctors_</h2>
+                    <p class="lead">Our team of dedicated doctors is highly qualified and committed to excellence in
+                        providing an aesthetically pleasing environment to ensure quality in medical care...</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                        alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                        width="300px" height="300px">
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Outdoors Checkup_</h2>
+                <p class="lead">There is an outdoor treatment zone or section in our Hospital for regular health
+                    checkups of different disease. The outdoor area is quite wide for enough patients to wait for
+                    their call to the doctor.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://images.unsplash.com/photo-1584467735871-8e85353a8413?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
+                    alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    width="300px" height="300px">
+
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">24 Hours Services_</h2>
+                <p class="lead">We have promised you that we will take care of all your health care concerns and we
+                    intend to strongly stand by it. Health at Homes offers you with 24-hour health service. Any
+                    matters related to health and we are available for you.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://images.unsplash.com/photo-1518281361980-b26bfd556770?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80"
+                    alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    width="300px" height="300px">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- This is Doctor section -->
+    <div class="main_heading pt-5 " id="Doctor">
+        <div class="text-center">
+            <h1 class="display-4">Our Qualified Doctors
+            </h1>
+            <hr class="w-50 mx-auto">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-3">
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Baghel Satyendra Singh
+                            <div> Cardiology </div>
+                        </h5>
+                        <p class="card-text">He qualified to treat heart attacks, heart failure, heart valve disease,
+                            arrhythmia, and high blood pressure. He work in hospitals as well as private practices. </p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="first fa-3x mx-5 px-4">
+                                <a style="color: #30587c;" href="https://www.facebook.com/"> <i
+                                        class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a style="color: rgb(194, 9, 9);" href="https://www.instagram.com/"> <i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a style="color: black;" href=""> <i class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a style="color: #867b7b;" href=""> <i class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Rachel Parker
+                            <div>OPHTHALMOLOGIST </div>
+                        </h5>
+                        <p class="card-text">She perform eye tests, diagnose and treat disease, prescribe medications
+                            and perform eye surgery. They also write prescriptions for glasses and contact lenses.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="first fa-3x mx-5 px-4">
+                                <a style="color: #30587c;" href="https://www.facebook.com/"> <i
+                                        class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a style="color: rgb(194, 9, 9);" href="https://www.instagram.com/"> <i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a style="color: black;" href=""> <i class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a style="color: #867b7b;" href=""> <i class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Lloyd Wilson
+                            <div>NEUROLOGIST</div>
+                        </h5>
+                        <p class="card-text"> He is responsible for treating and diagnosing issues of the nervous
+                            system. Our nervous system includes our brain, spinal cord, sensory organs, and all the
+                            nerves.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="first fa-3x mx-5 px-4">
+                                <a style="color: #30587c;" href="https://www.facebook.com/"> <i
+                                        class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a style="color: rgb(194, 9, 9);" href="https://www.instagram.com/"> <i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a style="color: black;" href=""> <i class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a style="color: #867b7b;" href=""> <i class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1624133172024-87559cb5eeb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                        class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.Mae Jemison
+                            <div> Paediatrician </div>
+                        </h5>
+                        <p class="card-text">She treat children. Since a child’s body functions in a different manner
+                            from ours, due to many factors like age and growing stages, their illness </p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="first fa-3x mx-5 px-4">
+                                <a style="color: #30587c;" href="https://www.facebook.com/"> <i
+                                        class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a style="color: rgb(194, 9, 9);" href="https://www.instagram.com/"> <i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a style="color: black;" href=""> <i class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a style="color: #867b7b;" href=""> <i class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1141&q=80"
+                        class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Asrani Sumit
+                            <div>Dental Surgeon</div>
+                        </h5>
+                        <p class="card-text">She is a doctor of oral health. Oral health includes teeth, tongue and
+                            gums. A dentist is known to diagnose and treat issues of these three areas.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="first fa-3x mx-5 px-4">
+                                <a style="color: #30587c;" href="https://www.facebook.com/"> <i
+                                        class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a style="color: rgb(194, 9, 9);" href="https://www.instagram.com/"> <i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a style="color: black;" href=""> <i class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a style="color: #867b7b;" href=""> <i class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1618255697574-4b4c47f6fc7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                        class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.Michelle Bachelet
+                            <div>Orthopaedic surgeon</div>
+                        </h5>
+                        <p class="card-text">She is known to deal with issues relating to the musculoskeletal system.
+                            This means muscles and bones. Any fracture, pain are treated. </p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="first fa-3x mx-5 px-4">
+                                <a style="color: #30587c;" href="https://www.facebook.com/"> <i
+                                        class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a style="color: rgb(194, 9, 9);" href="https://www.instagram.com/"> <i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a style="color: black;" href=""> <i class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a style="color: #867b7b;" href=""> <i class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <hr>
+    <!-- This is a Contact section -->
+    <div class="main_heading my-5" id="contact">
+        <div class="text-center">
+            <h1 class="display-4">Contact Us
+            </h1>
+            <hr class="w-25 mx-auto">
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Elaborate your Concern</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>Kerela</option>
+                    <option>Maharashtra</option>
+                    <option>Madhya Pradash</option>
+                    <option>Jammu</option>
+                    <option>Goa</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container bg-dark">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">© 2022 Mediplus, Inc</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Doctor</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
+
+            </ul>
+        </footer>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
